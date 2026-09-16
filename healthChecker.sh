@@ -11,7 +11,7 @@
 
 set -x #debug mode 
 set -e #exits if there is one error 
-set -o #pipefail
+set -o pipefail  #pipefail
 # set -exo # is the combination of the above three
 
 
