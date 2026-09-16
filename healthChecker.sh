@@ -10,8 +10,9 @@
 #######################
 
 set -x #debug mode 
-set 
-
+set -e #exits if there is one error 
+set -o #pipefail
+# set -exo # is the combination of the above three
 
 
 echo -e "\nDisk space/secondary memory info :"
@@ -22,3 +23,7 @@ echo -e "\nCPU info :"
 nproc
 echo -e "\nProcess info :"
 ps -ef
+
+echo -e "\nProcess id of bash"
+ps -ef | grep "bash" | awk -F" " '{print $2}'
+
